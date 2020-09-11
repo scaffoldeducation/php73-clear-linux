@@ -1,10 +1,6 @@
 FROM clearlinux:latest AS builder
 
-ENV VERSION_ID 33620
-
-ARG swupd_args
-
-RUN swupd update --no-boot-update $swupd_args
+ENV VERSION_ID 31300
 
 COPY --from=clearlinux/os-core:latest /usr/lib/os-release /
 
